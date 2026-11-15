@@ -201,7 +201,9 @@ AND kq.LANTHI = (
 	FROM KETQUATHI AS kq2
 	WHERE kq2.MAHV = kq.MAHV
 	AND kq2.MAMH = kq.MAMH
-);
+)
+ORDER BY hv.MAHV ASC;
+
 
 -- Câu 18: Danh sách học viên và điểm thi môn “Co So Du Lieu” (chỉ lấy điểm cao nhất của các lần thi).
 SELECT DISTINCT hv.MAHV, hv.HO + ' ' + hv.TEN AS HOTEN, kq.DIEM -- Dùn DISTINCT vì học viên thi các lần khác nhau có thể có cùng số điểm tối đa
